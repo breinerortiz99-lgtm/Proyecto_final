@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d3d5d8, #e8e8ea, #fafafb);
+  min-height: 100vh;
+}
+
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+
+.tarjeta-autenticacion {
+  width: 100%;
+  max-width: 430px;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(10px);
+}
+
+.encabezado-tarjeta {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo-tarjeta {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin-bottom: 8px !important;
+}
+
+.subtitulo-tarjeta {
+  color: #64748b !important;
+  font-size: 0.95rem !important;
+}
+
+
+.formulario-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+.universidad {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.texto-universidad {
+  color: #94a3b8 !important;
+  font-size: 0.85rem !important;
+}
+
+
