@@ -1,164 +1,161 @@
 .navbar {
-  background: rgba(15, 23, 42, 0.85) !important;
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
 }
 
 .toolbar-navbar {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 32px !important;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px !important;
 }
 
 
 .logo-navbar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: white;
-  flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    flex-grow: 1;
 }
 
 .icono-contenedor {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    #3b82f6,
-    #60a5fa,
-    #93c5fd
-  );
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,
+            #3b82f6,
+            #60a5fa,
+            #93c5fd);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
 }
 
 .icono-seguridad {
-  color: white !important;
-  font-size: 24px !important;
+    color: white !important;
+    font-size: 24px !important;
 }
 
 .texto-logo-principal {
-  font-weight: 700 !important;
-  line-height: 1.1 !important;
-  color: #ffffff !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    color: #ffffff !important;
 }
 
 .texto-logo-secundario {
-  color: rgba(255, 255, 255, 0.7) !important;
-  letter-spacing: 0.5px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    letter-spacing: 0.5px !important;
 }
 
 
 .menu-escritorio {
-  gap: 8px;
-  align-items: center;
+    gap: 8px;
+    align-items: center;
 }
 
 .boton-menu {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-weight: 500 !important;
-  padding: 6px 16px !important;
-  border-radius: 10px !important;
-  text-transform: none !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500 !important;
+    padding: 6px 16px !important;
+    border-radius: 10px !important;
+    text-transform: none !important;
 }
 
 .boton-menu:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
 }
 
 
 .boton-login {
-  margin-left: 16px !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.25) !important;
-  border-radius: 12px !important;
-  padding: 8px 20px !important;
-  text-transform: none !important;
-  font-weight: 600 !important;
+    margin-left: 16px !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    border-radius: 12px !important;
+    padding: 8px 20px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
 }
 
 .boton-login:hover {
-  border-color: #60a5fa !important;
-  background: rgba(96, 165, 250, 0.08) !important;
+    border-color: #60a5fa !important;
+    background: rgba(96, 165, 250, 0.08) !important;
 }
 
 
 .boton-registro {
-  border-radius: 12px !important;
-  padding: 8px 20px !important;
-  text-transform: none !important;
-  font-weight: 600 !important;
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #3b82f6
-  ) !important;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35) !important;
+    border-radius: 12px !important;
+    padding: 8px 20px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    background: linear-gradient(135deg,
+            #2563eb,
+            #3b82f6) !important;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35) !important;
 }
 
 .boton-registro:hover {
-  background: linear-gradient(
-    135deg,
-    #1d4ed8,
-    #2563eb
-  ) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45) !important;
+    background: linear-gradient(135deg,
+            #1d4ed8,
+            #2563eb) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45) !important;
 }
 
 
 .drawer-navbar {
-  width: 280px !important;
-  background: #0f172a !important;
-  color: white !important;
+    width: 200px !important;
+    height: auto !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    color: white !important;
+    border-bottom-left-radius: 10px;
+
 }
 
 .drawer-encabezado {
-  padding: 24px;
+    padding: 24px;
 }
 
 .drawer-titulo {
-  font-weight: 700 !important;
+    font-weight: 700 !important;
 }
 
 .item-drawer {
-  color: white !important;
+    color: white !important;
 }
 
 .item-drawer:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 
 
 @media (max-width: 900px) {
-  .toolbar-navbar {
-    padding: 0 16px !important;
-  }
+    .toolbar-navbar {
+        padding: 0 16px !important;
+    }
 }
 
 @media (max-width: 600px) {
-  .icono-contenedor {
-    width: 38px;
-    height: 38px;
-  }
+    .icono-contenedor {
+        width: 38px;
+        height: 38px;
+    }
 
-  .icono-seguridad {
-    font-size: 22px !important;
-  }
+    .icono-seguridad {
+        font-size: 22px !important;
+    }
 
-  .texto-logo-principal {
-    font-size: 0.95rem !important;
-  }
+    .texto-logo-principal {
+        font-size: 0.95rem !important;
+    }
 
-  .texto-logo-secundario {
-    font-size: 0.7rem !important;
-  }
+    .texto-logo-secundario {
+        font-size: 0.7rem !important;
+    }
 }

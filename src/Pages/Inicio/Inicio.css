@@ -1,0 +1,272 @@
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
+
+.pagina-inicio {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #0f172a 0%,
+    #111827 40%,
+    #0b1120 100%
+  );
+  color: white;
+}
+
+/* =========================
+Plataforma Instancial....
+========================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+  animation: aparecer 1s ease;
+}
+
+.etiqueta-hero {
+  display: inline-block;
+  padding: 8px 18px;
+  margin-bottom: 28px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  color: #93c5fd;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.titulo-hero {
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 28px;
+  letter-spacing: -1px;
+}
+
+
+.descripcion-hero {
+  max-width: 720px;
+  margin: 0 auto 42px;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+.botones-hero {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.boton-principal,
+.boton-secundario {
+  text-decoration: none;
+  padding: 14px 34px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.boton-principal {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+  color: white;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+.boton-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+}
+
+.boton-secundario {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.boton-secundario:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* =========================
+   CÍRCULOS DECORATIVOS
+========================= */
+
+.circulo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  animation: flotar 10s ease-in-out infinite;
+}
+
+.circulo-uno {
+  width: 350px;
+  height: 350px;
+  background: #3b82f6;
+  top: 10%;
+  left: 5%;
+}
+
+.circulo-dos {
+  width: 280px;
+  height: 280px;
+  background: #60a5fa;
+  bottom: 8%;
+  right: 6%;
+  animation-delay: 2s;
+}
+
+/* =========================
+   CARACTERÍSTICAS
+========================= */
+
+.seccion-caracteristicas {
+  padding: 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+}
+
+.grid-caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.tarjeta-caracteristica {
+  padding: 32px 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  transition: all 0.35s ease;
+}
+
+.tarjeta-caracteristica:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.numero-caracteristica {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.tarjeta-caracteristica h3 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.tarjeta-caracteristica p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .titulo-hero {
+    font-size: 2.7rem;
+  }
+
+  .descripcion-hero {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .titulo-seccion {
+    font-size: 2.1rem;
+  }
+
+  .seccion-caracteristicas {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-hero {
+    font-size: 2.2rem;
+  }
+
+  .boton-principal,
+  .boton-secundario {
+    width: 80%;
+    text-align: center;
+  }
+
+  .circulo {
+    display: none;
+  }
+}

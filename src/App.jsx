@@ -6,6 +6,7 @@ import DashBoard from './Pages/DashBoard/DashBoard.jsx'
 import RecuperarPassword from './Pages/RecuperarPassword/RecuperarPassword.jsx'
 import Nav from './Components/Nav/Nav.jsx'
 import Header from './Components/Header/Header.jsx'
+import Inicio from './Pages/Inicio/Inicio.jsx'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
         <Nav/>
         <Routes>
+          <Route path="/" element={<Inicio />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/dashboard" element={<DashBoard />} />
