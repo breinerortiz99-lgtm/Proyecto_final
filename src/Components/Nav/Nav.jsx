@@ -29,8 +29,6 @@ function Nav() {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUsuario(user);
         });
-
-
         return () => unsubscribe();
     }, []);
 
@@ -167,6 +165,14 @@ function Nav() {
                                     className="boton-menu"
                                 >
                                     Dashboard
+                                </Button>
+
+                                 <Button
+                                    component={Link}
+                                    to="/crear-incidente"
+                                    className="boton-menu"
+                                >
+                                    Crear Incidente
                                 </Button>
 
                                 <Button

@@ -1,0 +1,96 @@
+.formulario-incidente {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grupo-formulario label {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.grupo-formulario textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,0.15);
+}
+
+.grupo-formulario input::placeholder,
+.grupo-formulario textarea::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.grupo-formulario option {
+  background: #0f172a;
+}
+
+.boton-gps {
+
+  width: fit-content;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #3b82f6
+    );
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.boton-gps:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px
+    rgba(37,99,235,0.3);
+}
+
+.texto-gps {
+
+  margin-top: 10px;
+
+  color: #93c5fd;
+
+  font-size: 0.9rem;
+}

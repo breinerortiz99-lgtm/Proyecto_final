@@ -7,6 +7,7 @@ import RecuperarPassword from './Pages/RecuperarPassword/RecuperarPassword.jsx'
 import Nav from './Components/Nav/Nav.jsx'
 import Header from './Components/Header/Header.jsx'
 import Inicio from './Pages/Inicio/Inicio.jsx'
+import CrearIncidente from './Pages/CrearIncidente/CrearIncidente.jsx'
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/registro" element={<Registro />} />
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/recuperar-password" element={<RecuperarPassword />} />
+          <Route path="/crear-incidente" element={<CrearIncidente />} />
         </Routes>
       </BrowserRouter>
     </>
