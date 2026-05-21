@@ -279,12 +279,13 @@ function Nav() {
                             </ListItemButton>
 
                             <ListItemButton
-                                component={Link}
-                                to="/incidentes"
-                                onClick={() => toggleDrawer(false)}
+                                onClick={() => {
+                                    toggleDrawer(false);
+                                    cerrarSesion();
+                                }}
                                 className="item-drawer"
                             >
-                                <ListItemText primary="Incidentes" />
+                                <ListItemText primary="Cerrar Sesión" />
                             </ListItemButton>
                         </>
                     )}
