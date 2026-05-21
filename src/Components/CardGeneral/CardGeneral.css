@@ -1,0 +1,45 @@
+.card-general {
+  width: 100%;
+  min-height: 230px;
+
+  border-radius: 22px !important;
+
+  background: rgba(255, 255, 255, 0.05) !important;
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.35s ease !important;
+
+  box-shadow: none !important;
+}
+
+.card-general:hover {
+  transform: translateY(-8px);
+
+  background: rgba(255, 255, 255, 0.08) !important;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+.contenido-card-general {
+  padding: 32px 28px !important;
+}
+
+.titulo-card-general {
+  font-weight: 700 !important;
+
+  color: white !important;
+
+  margin-bottom: 18px !important;
+}
+
+.descripcion-card-general {
+  color: rgba(255, 255, 255, 0.72) !important;
+
+  line-height: 1.8 !important;
+
+  font-size: 0.98rem !important;
+}

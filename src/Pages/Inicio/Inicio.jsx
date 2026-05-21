@@ -1,29 +1,9 @@
 import { Link } from "react-router-dom";
+import CardGeneral from "../../Components/CardGeneral/CardGeneral";
 import "./Inicio.css";
 
 function Inicio() {
-  const caracteristicas = [
-    {
-      titulo: "Seguridad Total",
-      descripcion:
-        "Autenticación segura y protección de la información institucional."
-    },
-    {
-      titulo: "Alertas en Tiempo Real",
-      descripcion:
-        "Notificaciones automáticas para el seguimiento de incidentes."
-    },
-    {
-      titulo: "Análisis y Reportes",
-      descripcion:
-        "Estadísticas detalladas para apoyar la toma de decisiones."
-    },
-    {
-      titulo: "Respuesta Rápida",
-      descripcion:
-        "Gestión eficiente y automatizada de cada incidente reportado."
-    }
-  ];
+  
 
   return (
     <div className="pagina-inicio">
@@ -83,20 +63,26 @@ function Inicio() {
         </p>
 
         <div className="grid-caracteristicas">
-          {caracteristicas.map((item, index) => (
-            <div
-              className="tarjeta-caracteristica"
-              key={index}
-            >
-              <div className="numero-caracteristica">
-                0{index + 1}
-              </div>
+          <CardGeneral
+            titulo="Seguridad"
+            descripcion="Se implementaron medidas de seguridad
+            avanzadas para proteger la información de los
+            usuarios."
+          />
 
-              <h3>{item.titulo}</h3>
+          <CardGeneral
+            titulo="Seguimiento"
+            descripcion="El sistema proporciona un seguimiento
+            detallado de los incidentes, permitiendo a los
+            administradores tomar decisiones informadas."
+          />
 
-              <p>{item.descripcion}</p>
-            </div>
-          ))}
+          <CardGeneral
+            titulo="Reporte"
+            descripcion="Los usuarios tienen acceso a un
+            reporte detallado de los incidentes, facilitando
+            la toma de decisiones."
+          />
         </div>
       </section>
     </div>

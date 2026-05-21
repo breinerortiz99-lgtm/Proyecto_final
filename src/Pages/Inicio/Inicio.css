@@ -170,45 +170,9 @@ Plataforma Instancial....
   gap: 28px;
 }
 
-.tarjeta-caracteristica {
-  padding: 32px 28px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
-  transition: all 0.35s ease;
-}
 
-.tarjeta-caracteristica:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
 
-.numero-caracteristica {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #93c5fd;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(96, 165, 250, 0.2);
-}
 
-.tarjeta-caracteristica h3 {
-  font-size: 1.25rem;
-  margin-bottom: 14px;
-}
-
-.tarjeta-caracteristica p {
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.8;
-}
 
 /* =========================
    ANIMACIONES
