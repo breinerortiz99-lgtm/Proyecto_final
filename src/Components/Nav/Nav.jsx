@@ -167,7 +167,7 @@ function Nav() {
                                     Dashboard
                                 </Button>
 
-                                 <Button
+                                <Button
                                     component={Link}
                                     to="/crear-incidente"
                                     className="boton-menu"
@@ -270,13 +270,21 @@ function Nav() {
                             </ListItemButton>
 
                             <ListItemButton
-                                onClick={() => {
-                                    toggleDrawer(false);
-                                    cerrarSesion();
-                                }}
+                                component={Link}
+                                to="/crear-incidente"
+                                onClick={() => toggleDrawer(false)}
                                 className="item-drawer"
                             >
-                                <ListItemText primary="Cerrar Sesión" />
+                                <ListItemText primary="Crear Incidente" />
+                            </ListItemButton>
+
+                            <ListItemButton
+                                component={Link}
+                                to="/incidentes"
+                                onClick={() => toggleDrawer(false)}
+                                className="item-drawer"
+                            >
+                                <ListItemText primary="Incidentes" />
                             </ListItemButton>
                         </>
                     )}

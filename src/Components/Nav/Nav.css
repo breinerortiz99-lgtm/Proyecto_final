@@ -125,12 +125,22 @@
 
 
 .drawer-navbar {
-    width: 200px !important;
+    width: auto !important;
     height: auto !important;
     background: rgba(15, 23, 42, 0.85) !important;
     color: white !important;
     border-bottom-left-radius: 10px;
+    padding: 10px !important;
 
+}
+
+.correo-usuario-drawer{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    color: #d0cece;
+    font-weight: 600 !important;
 }
 
 .drawer-encabezado {
