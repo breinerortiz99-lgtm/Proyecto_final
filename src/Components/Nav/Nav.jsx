@@ -15,7 +15,6 @@ import SecurityIcon from "@mui/icons-material/Security";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth, db } from "../../FireBase/config";
 import { doc, getDoc } from "firebase/firestore";
-
 import Swal from "sweetalert2";
 import "./Nav.css";
 
@@ -77,7 +76,7 @@ function Nav() {
                 }
             }
         };
-        consultarNombre(); 
+        consultarNombre();
     })
 
 

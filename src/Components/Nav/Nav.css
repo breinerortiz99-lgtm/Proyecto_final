@@ -29,10 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg,
-            #3b82f6,
-            #60a5fa,
-            #93c5fd);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
 }
 
@@ -93,18 +90,37 @@
     padding: 8px 20px !important;
     text-transform: none !important;
     font-weight: 600 !important;
-    background: linear-gradient(135deg,
-            #2563eb,
-            #3b82f6) !important;
+    background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35) !important;
 }
 
 .boton-registro:hover {
-    background: linear-gradient(135deg,
-            #1d4ed8,
-            #2563eb) !important;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
     transform: translateY(-1px);
     box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45) !important;
+}
+
+.boton-cerrar-sesion {
+    padding: 6px !important;
+    border-radius: 12px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+}
+
+.boton-cerrar-sesion:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45) !important;
+}
+
+.correo-usuario {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    color: #d0cece;
+    font-weight: 600 !important ;
+
 }
 
 
