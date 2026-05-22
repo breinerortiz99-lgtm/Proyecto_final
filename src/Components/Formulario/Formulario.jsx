@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { collection, addDoc, serverTimestamp} from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL} from "firebase/storage";
-import { auth, db, storage} from "../../FireBase/config";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { auth, db, storage } from "../../FireBase/config";
 import Swal from "sweetalert2";
 import Boton from "../Boton/Boton";
 import "./Formulario.css";
@@ -248,6 +248,7 @@ function Formulario() {
         <input
           type="file"
           accept="image/*"
+          capture="environment"
           onChange={(e) =>
             setFoto(e.target.files[0])
           }
