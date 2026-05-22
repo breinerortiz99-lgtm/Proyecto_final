@@ -161,10 +161,10 @@ function Nav() {
 
                                 <Button
                                     component={Link}
-                                    to="/dashboard"
+                                    to="/mis-incidentes"
                                     className="boton-menu"
                                 >
-                                    Dashboard
+                                  Mis Incidentes
                                 </Button>
 
                                 <Button
@@ -262,11 +262,11 @@ function Nav() {
 
                             <ListItemButton
                                 component={Link}
-                                to="/dashboard"
+                                to="/mis-incidentes"
                                 onClick={() => toggleDrawer(false)}
                                 className="item-drawer"
                             >
-                                <ListItemText primary="Dashboard" />
+                                <ListItemText primary="Mis Incidentes" />
                             </ListItemButton>
 
                             <ListItemButton

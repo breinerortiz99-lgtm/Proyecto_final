@@ -1,0 +1,58 @@
+.pagina-incidentes {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0f172a 0%,
+      #111827 50%,
+      #0b1120 100%
+    );
+}
+
+.contenedor-incidentes {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 60px 20px;
+}
+
+.encabezado-mis-incidentes {
+  margin-bottom: 40px;
+}
+
+.encabezado-mis-incidentes h1 {
+  color: white;
+
+  font-size: 3rem;
+
+  margin-bottom: 14px;
+
+  font-weight: 800;
+}
+
+.encabezado-mis-incidentes p {
+  color: rgba(255,255,255,0.7);
+
+  max-width: 650px;
+
+  line-height: 1.8;
+}
+
+.grid-incidentes {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(340px, 1fr));
+
+  gap: 28px;
+}
+
+@media (max-width: 768px) {
+
+  .encabezado-mis-incidentes h1 {
+    font-size: 2.2rem;
+  }
+
+}
