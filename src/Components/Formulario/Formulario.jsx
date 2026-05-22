@@ -247,8 +247,7 @@ function Formulario() {
 
         <input
           type="file"
-          accept="image/*"
-          capture="environment"
+           accept="image/*;capture=camera"
           onChange={(e) =>
             setFoto(e.target.files[0])
           }
