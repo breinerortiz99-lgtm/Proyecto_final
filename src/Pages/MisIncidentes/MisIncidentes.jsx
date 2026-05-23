@@ -1,53 +1,45 @@
 import { useEffect, useState } from "react";
-import { collection, query, where, onSnapshot, orderBy} from "firebase/firestore";
-import { auth, db} from "../../FireBase/config";
+import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
+import { auth, db } from "../../FireBase/config";
 import CardIncidente from "../../Components/CardIncidente/CardIncidente";
 import "./MisIncidentes.css";
 
 function MisIncidentes() {
 
-  const [incidentes, setIncidentes] =useState([]);
+  const [incidentes, setIncidentes] = useState([]);
 
   useEffect(() => {
 
-  const unsubscribeAuth =
-    auth.onAuthStateChanged((usuario) => {
+    const unsubscribeAuth =
+      auth.onAuthStateChanged((usuario) => {
 
-      if (!usuario) return;
+        if (!usuario) return;
 
-      const consulta = query(
-        collection(db, "incidentes"),
+        const consulta = query(collection(db, "incidentes"),
+          where(
+            "uid",
+            "==",
+            usuario.uid
+          ),
 
-        where(
-          "uid",
-          "==",
-          usuario.uid
-        ),
-
-      );
-
-      const unsubscribeFirestore =
-        onSnapshot(
-          consulta,
-          (snapshot) => {
-
-            const datos =
-              snapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data(),
-              }));
-
-            setIncidentes(datos);
-          }
         );
 
-      return () => unsubscribeFirestore();
-    });
+        const unsubscribeFirestore =
+          onSnapshot( consulta, (snapshot) => {
+              const datos = snapshot.docs.map((doc) => ({
+                  id: doc.id, ...doc.data(),
+                }));
+              setIncidentes(datos);
+            }
+          );
 
-  return () => unsubscribeAuth();
+        return () => unsubscribeFirestore();
+      });
 
-}, []);
- 
+    return () => unsubscribeAuth();
+
+  }, []);
+
 
 
   return (

@@ -1,15 +1,9 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import "./CardIncidente.css";
 
-function CardIncidente({
-  tipo,
-  descripcion,
-  ubicacion,
-  estado,
-  foto,
-  fecha
-}) {
+function CardIncidente({ tipo, descripcion, ubicacion, estado, foto, fecha }) {
 
   const fechaFormateada =
     fecha?.toDate().toLocaleDateString(
@@ -24,25 +18,26 @@ function CardIncidente({
   return (
 
     <Card className="card-incidente">
-
       <CardContent className="contenido-card-incidente">
+        <PhotoProvider>
 
-        <img
-          src={foto}
-          alt={tipo}
-          className="imagen-incidente"
-        />
+          <PhotoView src={foto}>
 
+            <img
+              src={foto}
+              alt={tipo}
+              className="imagen-incidente"
+            />
+
+          </PhotoView>
+
+        </PhotoProvider>
         <div className="informacion-incidente">
-
           <div className="encabezado-incidente">
-
             <h3>{tipo}</h3>
-
             <span className={`estado ${estado}`}>
               {estado}
             </span>
-
           </div>
 
           <p className="descripcion-incidente">
@@ -58,13 +53,9 @@ function CardIncidente({
             <span>
               {fechaFormateada}
             </span>
-
           </div>
-
         </div>
-
       </CardContent>
-
     </Card>
   );
 }
