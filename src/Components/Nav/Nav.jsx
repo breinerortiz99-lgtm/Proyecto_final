@@ -89,7 +89,7 @@ function Nav() {
                     {/* Logo */}
                     <Box
                         component={Link}
-                        to={usuario ? "/dashboard" : "/"}
+                        to={usuario ? "/mis-incidentes" : "/"}
                         className="logo-navbar"
                     >
                         <Box className="icono-contenedor">

@@ -76,7 +76,7 @@ function Login() {
         confirmButtonText: "Aceptar",
       });
 
-      navigate("/dashboard");
+      navigate("/mis-incidentes");
     } catch (error) {
 
       if (

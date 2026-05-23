@@ -54,7 +54,7 @@ function Registro() {
       setEmail("");
       setPassword("");
 
-      navigate("/dashboard");
+      navigate("/mis-incidentes");
     } catch (error) {
       Swal.fire({
         icon: "error",

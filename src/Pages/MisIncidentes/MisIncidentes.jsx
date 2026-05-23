@@ -1,44 +1,99 @@
 import { useEffect, useState } from "react";
-import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { auth, db } from "../../FireBase/config";
 import CardIncidente from "../../Components/CardIncidente/CardIncidente";
+import Selector from "../../Components/Selector/Selector";
 import "./MisIncidentes.css";
 
 function MisIncidentes() {
 
   const [incidentes, setIncidentes] = useState([]);
+  const [filtro, setFiltro] = useState("Todos");
+  const opcionesFiltro = [
+
+    {
+      valor: "Todos",
+      label: "Todos"
+    },
+
+    {
+      valor: "Reportado",
+      label: "Reportados"
+    },
+
+    {
+      valor: "Revision",
+      label: "En revisión"
+    },
+
+    {
+      valor: "Resuelto",
+      label: "Resueltos"
+    }
+
+  ];
+
+
 
   useEffect(() => {
 
-    const unsubscribeAuth =
-      auth.onAuthStateChanged((usuario) => {
+    const unsubscribeAuth = auth.onAuthStateChanged((usuario) => {
 
-        if (!usuario) return;
+      if (!usuario) return;
 
-        const consulta = query(collection(db, "incidentes"),
-          where(
-            "uid",
-            "==",
-            usuario.uid
-          ),
+      const consulta = query(collection(db, "incidentes"),
 
+        where("uid", "==", usuario.uid)
+
+      );
+
+      const unsubscribeFirestore =
+
+        onSnapshot(
+          consulta,
+
+          (snapshot) => {
+
+            const datos =
+              snapshot.docs.map(
+                (doc) => ({
+
+                  id: doc.id,
+
+                  ...doc.data(),
+
+                }));
+
+            setIncidentes(datos);
+          }
         );
 
-        const unsubscribeFirestore =
-          onSnapshot( consulta, (snapshot) => {
-              const datos = snapshot.docs.map((doc) => ({
-                  id: doc.id, ...doc.data(),
-                }));
-              setIncidentes(datos);
-            }
-          );
+      return () =>
+        unsubscribeFirestore();
+    });
 
-        return () => unsubscribeFirestore();
-      });
-
-    return () => unsubscribeAuth();
+    return () =>
+      unsubscribeAuth();
 
   }, []);
+
+
+
+
+  const incidentesFiltrados =
+
+    incidentes.filter(
+      (incidente) => {
+
+        if (filtro === "Todos") {
+          return true;
+        }
+
+        return (
+          incidente.estado === filtro
+        );
+      });
+
 
 
 
@@ -61,31 +116,52 @@ function MisIncidentes() {
 
         </div>
 
+
+
+        <div className="contenedor-filtro">
+
+          <Selector
+
+            valor={filtro}
+
+            setValor={setFiltro}
+
+            opciones={opcionesFiltro}
+
+          />
+
+        </div>
+
+
+
         <div className="grid-incidentes">
 
           {
-            incidentes.map((incidente) => (
+            incidentesFiltrados.map(
+              (incidente) => (
 
-              <CardIncidente
-                key={incidente.id}
+                <CardIncidente
+                  key={incidente.id}
+                  tipo={incidente.tipo}
+                  descripcion={
+                    incidente.descripcion
+                  }
+                  ubicacion={
+                    incidente.ubicacion
+                  }
+                  estado={
+                    incidente.estado
+                  }
+                  foto={
+                    incidente.foto
+                  }
+                  fecha={
+                    incidente.fecha
+                  }
 
-                tipo={incidente.tipo}
-                descripcion={
-                  incidente.descripcion
-                }
+                />
 
-                ubicacion={
-                  incidente.ubicacion
-                }
-
-                estado={incidente.estado}
-
-                foto={incidente.foto}
-
-                fecha={incidente.fecha}
-              />
-
-            ))
+              ))
           }
 
         </div>

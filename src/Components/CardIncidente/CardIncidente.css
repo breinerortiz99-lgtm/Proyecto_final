@@ -1,5 +1,5 @@
 .card-incidente {
- padding: 0 !important;
+  padding: 0 !important;
   border-radius: 10px !important;
   background: rgba(255,255,255,0.05) !important;
   border: 1px solid rgba(255,255,255,0.08);
@@ -37,6 +37,7 @@
 
 .encabezado-incidente {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
@@ -55,7 +56,6 @@
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 600;
-  white-space: nowrap;
 }
 
 .estado.Reportado {
