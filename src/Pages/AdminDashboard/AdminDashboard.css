@@ -1,0 +1,161 @@
+.admin-dashboard {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0f172a,
+            #111827
+        );
+
+    padding: 40px 20px;
+
+    color: white;
+}
+
+
+
+.admin-contenedor {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+
+/* ======================
+   ENCABEZADO
+====================== */
+
+.admin-encabezado {
+
+    margin-bottom: 40px;
+}
+
+
+
+.admin-encabezado h1 {
+
+    font-size: 2.4rem;
+
+    margin-bottom: 10px;
+}
+
+
+
+.admin-encabezado p {
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 1rem;
+}
+
+
+
+/* ======================
+   RESUMEN
+====================== */
+
+.admin-resumen {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 20px;
+
+    margin-bottom: 50px;
+}
+
+
+
+.admin-card-resumen {
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.25s;
+}
+
+
+
+.admin-card-resumen:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(59,130,246,0.5);
+}
+
+
+
+.admin-card-resumen h3 {
+
+    font-size: 1rem;
+
+    color:
+        rgba(255,255,255,0.7);
+
+    margin-bottom: 15px;
+}
+
+
+
+.admin-card-resumen span {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+
+
+/* ======================
+   INCIDENTES
+====================== */
+
+.admin-incidentes h2 {
+    margin-bottom: 25px;
+}
+
+
+
+.grid-incidentes-admin {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+
+
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 768px) {
+
+    .admin-encabezado h1 {
+        font-size: 2rem;
+    }
+
+    .grid-incidentes-admin {
+        grid-template-columns: 1fr;
+    }
+
+}

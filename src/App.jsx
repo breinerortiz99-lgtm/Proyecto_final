@@ -9,6 +9,7 @@ import Header from './Components/Header/Header.jsx'
 import Inicio from './Pages/Inicio/Inicio.jsx'
 import CrearIncidente from './Pages/CrearIncidente/CrearIncidente.jsx'
 import MisIncidentes from './Pages/MisIncidentes/MisIncidentes.jsx'
+import AdminDashboard from './Pages/AdminDashboard/AdminDashboard.jsx'
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/recuperar-password" element={<RecuperarPassword />} />
           <Route path="/crear-incidente" element={<CrearIncidente />} />
           <Route path="/mis-incidentes" element={<MisIncidentes />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </>
