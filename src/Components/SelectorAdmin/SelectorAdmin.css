@@ -1,0 +1,24 @@
+.selector-admin {
+   border-radius: 20px !important;
+}
+.selector-admin .MuiOutlinedInput-root {
+    background: rgba(255, 255, 255, 0.06);
+    margin-bottom: 16px;
+    color: white;
+}
+
+.selector-admin .MuiOutlinedInput-notchedOutline {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.selector-admin:hover .MuiOutlinedInput-notchedOutline {
+    border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.selector-admin .MuiSvgIcon-root {
+    color: white;
+}
+
+.selector-admin .MuiSelect-select {
+    color: white;
+}

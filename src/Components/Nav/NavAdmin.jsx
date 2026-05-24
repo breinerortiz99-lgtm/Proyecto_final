@@ -19,8 +19,8 @@ import "./Nav.css";
 
 
 function NavAdmin() {
-  const [abierto, setAbierto] =useState(false);
-  const { nombre,cerrarSesion} = useAuth();
+  const [abierto, setAbierto] = useState(false);
+  const { nombre, cerrarSesion } = useAuth();
   const navigate = useNavigate();
   const opciones = [
 
@@ -32,6 +32,11 @@ function NavAdmin() {
     {
       texto: "Incidentes",
       ruta: "/admin/incidentes"
+    },
+
+    {
+      texto: "Gestionar",
+      ruta: "/admin/incidentes"
     }
 
   ];
@@ -41,14 +46,15 @@ function NavAdmin() {
 
 
   const handleLogout =
-    async () => { await cerrarSesion();
-    Swal.fire({
-      icon: "success",
-      title: "Sesión cerrada"
-    });
-    
-    navigate("/");
-  };
+    async () => {
+      await cerrarSesion();
+      Swal.fire({
+        icon: "success",
+        title: "Sesión cerrada"
+      });
+
+      navigate("/");
+    };
 
 
 
@@ -112,7 +118,7 @@ function NavAdmin() {
 
           <Box
             className="menu-escritorio"
-            sx={{display: {xs: "none", md: "flex"}}}
+            sx={{ display: { xs: "none", md: "flex" } }}
           >
 
             {
@@ -175,7 +181,7 @@ function NavAdmin() {
               setAbierto(true)
             }
 
-            sx={{display: {xs: "flex",md: "none"}}}
+            sx={{ display: { xs: "flex", md: "none" } }}
           >
 
             <MenuIcon />

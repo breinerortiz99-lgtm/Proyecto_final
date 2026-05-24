@@ -22,8 +22,8 @@ function MisIncidentes() {
     },
 
     {
-      valor: "Revision",
-      label: "En revisión"
+      valor: "En proceso",
+      label: "En Proceso"
     },
 
     {

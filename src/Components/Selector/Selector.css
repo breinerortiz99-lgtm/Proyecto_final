@@ -6,23 +6,17 @@
 }
 
 .selector-general .MuiOutlinedInput-notchedOutline {
-
-    border:
-        1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .selector-general:hover .MuiOutlinedInput-notchedOutline {
-
-    border:
-        1px solid rgba(59, 130, 246, 0.5);
+    border: 1px solid rgba(59, 130, 246, 0.5);
 }
 
 .selector-general .MuiSvgIcon-root {
-
     color: white;
 }
 
 .selector-general .MuiSelect-select {
-
     color: white;
 }

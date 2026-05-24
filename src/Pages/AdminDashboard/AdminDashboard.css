@@ -99,8 +99,7 @@
 
     transform: translateY(-4px);
 
-    border-color:
-        rgba(59,130,246,0.5);
+    border-color: rgba(59,130,246,0.5);
 }
 
 
@@ -148,11 +147,19 @@
    RESPONSIVE
 ====================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .admin-encabezado h1 {
         font-size: 2rem;
     }
+
+    .grid-incidentes-admin {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
 
     .grid-incidentes-admin {
         grid-template-columns: 1fr;

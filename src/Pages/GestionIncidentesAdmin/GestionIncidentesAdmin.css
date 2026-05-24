@@ -1,0 +1,95 @@
+.gestion-admin {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient( 180deg, #0f172a, #111827 );
+    color: white;
+}
+
+.contenedor-gestion-admin {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+/* ENCABEZADO */
+
+.encabezado-gestion {
+    margin-bottom: 35px;
+}
+
+
+.encabezado-gestion h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+
+
+.encabezado-gestion p {
+    color: rgba(255,255,255,0.7);
+}
+
+
+
+/*   FILTROS */
+
+.filtros-admin {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filtros-admin input {
+    flex: 1;
+    height: auto;
+    border-radius: 50px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding: 14px 18px;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+
+.filtros-admin input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+
+
+/* ======================
+   GRID
+====================== */
+
+.grid-admin {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);       
+ gap: 24px;
+}
+
+
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 900px) {
+    .encabezado-gestion h1 {
+        font-size: 2rem;
+    }
+
+    .grid-admin {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+    .grid-admin {
+        grid-template-columns: 1fr;
+    }
+}

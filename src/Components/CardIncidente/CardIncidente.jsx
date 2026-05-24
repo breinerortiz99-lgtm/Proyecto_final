@@ -35,7 +35,7 @@ function CardIncidente({ tipo, descripcion, ubicacion, estado, foto, fecha }) {
         <div className="informacion-incidente">
           <div className="encabezado-incidente">
             <h3>{tipo}</h3>
-            <span className={`estado ${estado}`}>
+            <span className={`estado ${estado.replace(" ", "-")}`}>
               {estado}
             </span>
           </div>

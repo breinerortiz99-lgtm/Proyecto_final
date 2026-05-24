@@ -28,21 +28,24 @@
 
 .grid-incidentes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 420px));
+  grid-template-columns: repeat(3,1fr);
   gap: 28px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 900px) {
 
   .encabezado-mis-incidentes h1 {
     font-size: 2.2rem;
   }
+.grid-incidentes {
+  grid-template-columns: repeat(2,1fr);
 }
 
+}
 @media (max-width: 480px) {
 
  .grid-incidentes {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   overflow: hidden;
 }
 }
