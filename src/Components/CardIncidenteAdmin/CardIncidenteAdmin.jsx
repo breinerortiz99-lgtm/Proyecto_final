@@ -3,12 +3,11 @@ import CardContent from "@mui/material/CardContent";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../FireBase/config";
-import SelectorAdmin
-    from "../SelectorAdmin/SelectorAdmin";
+import SelectorAdmin from "../SelectorAdmin/SelectorAdmin";
 import Swal from "sweetalert2";
 import "./CardIncidenteAdmin.css";
 
-function CardIncidenteAdmin({ id, tipo, descripcion, ubicacion, estado, foto, fecha }) {
+function CardIncidenteAdmin({ id, tipo, descripcion, ubicacion, estado, foto, fecha, seleccionado, onSeleccionar }) {
 
     const fechaFormateada =
         fecha?.toDate().toLocaleDateString(
@@ -49,10 +48,17 @@ function CardIncidenteAdmin({ id, tipo, descripcion, ubicacion, estado, foto, fe
 
         <Card className="card-incidente-admin">
 
-            <CardContent
-                className=
-                "contenido-card-incidente-admin"
-            >
+            <CardContent className= "contenido-card-incidente-admin">
+
+                <div className="contenedor-checkbox">
+
+                    <input
+                        type="checkbox"
+                        checked={seleccionado}
+                        onChange={() =>  onSeleccionar(id)}
+                    />
+
+                </div>
 
                 <PhotoProvider>
 
@@ -95,7 +101,7 @@ function CardIncidenteAdmin({ id, tipo, descripcion, ubicacion, estado, foto, fe
 
 
                     <div className="acciones-admin">
-                     <label >Actualizar Estado:</label>
+                        <label >Actualizar Estado:</label>
                         <SelectorAdmin
                             valor={estado}
 

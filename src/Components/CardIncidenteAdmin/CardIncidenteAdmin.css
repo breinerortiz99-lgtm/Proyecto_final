@@ -46,6 +46,7 @@
 .encabezado-incidente-admin {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
@@ -118,6 +119,20 @@
     gap: 10px;
     color: white;
     max-width: 15vw;
+}
+
+.contenedor-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+
+
+.contenedor-checkbox input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
